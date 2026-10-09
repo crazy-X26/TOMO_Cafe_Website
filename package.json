@@ -1,0 +1,25 @@
+{
+    "name": "tomo-cafe",
+    "version": "0.0.1",
+    "description": "PoC website",
+    "homepage": "https://github.com/crazy-X26/TOMO_Cafe_Website#readme",
+    "bugs": {
+        "url": "https://github.com/crazy-X26/TOMO_Cafe_Website/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/crazy-X26/TOMO_Cafe_Website.git"
+    },
+    "author": "crazy26",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass:css",
+        "sass:watch": "sass --watch scss:css",
+        "dev": "concurrently \"npm run sass:watch\" \"vite\""
+    },
+    "devDependencies": {
+        "concurrently": "^10.0.6",
+        "vite": "^8.3.4"
+    }
+}
