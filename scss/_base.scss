@@ -7,9 +7,21 @@
   box-sizing: border-box;
 }
 
+h1 {
+    color: $dark-green;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
 body {
     position: relative;
     isolation: isolate;
+
+    section[id] {
+        scroll-margin-top: 50px;
+    }
 
     &::before {
         content: "";
@@ -21,7 +33,7 @@ body {
         background-size: cover;
         background-position: center;
 
-        opacity: 0.9;
+        opacity: 0.95;
         z-index: -1;
         pointer-events: none;
     }
@@ -29,9 +41,15 @@ body {
     .header {
         background-color: $roman_coffee;
         padding: 15px 20px;
-        min-width: fit-content;
+        width: 100;
+        box-sizing: border-box;
+
         border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;;
+        border-bottom-right-radius: 12px;
+
+        position: sticky;
+        top: 0;
+        z-index: 100;
 
         .nav {
             color: $zeus;
@@ -40,6 +58,10 @@ body {
             justify-content: center;
             gap: 15px;
             
+            p {
+                color: $zeus;
+            }
+
             a:link {
                 color: $zeus;
                 white-space: nowrap;
@@ -62,31 +84,28 @@ body {
         }
     }
 
-    .philosophie {
-        h1 {
-            color: $dark-green;
-            text-align: center;
-            margin: 4rem, 0;
-            font-size: 2rem;
-        }
+    p {
+        color: $nevada;
+        text-align: center;
+        font-size: 1rem;
+        padding: 5px;
+    }
 
-        p {
-            color: $moos-green;
-            text-align: center;
+    .coffeeAndSnacks {
+        padding: 1rem;
+        iframe {
+            display: block;
+            width: 100%;
+            height: 80vh;
+            min-height: 500px;
+            border: none;
+            border-radius: 12px;
         }
     }
 
     .impressionen {
-        padding: 4rem 0;
+        padding: 1rem 0;
         overflow: hidden;
-
-        h2 {
-            color: $moos-green;
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-
-        }
 
         .gallery {
             width: 100%;
