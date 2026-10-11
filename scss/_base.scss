@@ -1,0 +1,126 @@
+@use 'variables' as *;
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+
+    &::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+
+        background-image: url('../assets/tomo-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        opacity: 0.9;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .header {
+        background-color: $roman_coffee;
+        padding: 15px 20px;
+        min-width: fit-content;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;;
+
+        .nav {
+            color: $zeus;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            
+            a:link {
+                color: $zeus;
+                white-space: nowrap;
+            }
+            a:hover {
+                text-decoration: underline;
+                background-color: transparent;
+            }
+            a:active {
+                font-weight: bold;
+            }
+
+            a:visited {
+                color: $zeus;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .philosophie {
+        h1 {
+            color: $dark-green;
+            text-align: center;
+            margin: 4rem, 0;
+            font-size: 2rem;
+        }
+
+        p {
+            color: $moos-green;
+            text-align: center;
+        }
+    }
+
+    .impressionen {
+        padding: 4rem 0;
+        overflow: hidden;
+
+        h2 {
+            color: $moos-green;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+
+        }
+
+        .gallery {
+            width: 100%;
+            overflow-x: auto;
+            scrollbar-width: none;
+            cursor: grab;
+            touch-action: pan-x;
+            user-select: none;
+            scroll-behavior: auto;
+
+            &::-webkit-scrollbar {
+                cursor: grabbing;
+                user-select: none;
+            }
+
+            &.is-dragging {
+                cursor: grabbing;
+                user-select: none;
+            }
+
+            .gallery-items {
+                display: flex;
+                gap: 1.5rem;
+                width: max-content;
+
+                img {
+                    width: 300px;
+                    height: 220px;
+                    object-fit: cover;
+                    border-radius: 12px;
+                    flex-shrink: 0;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}
