@@ -40,8 +40,9 @@ body {
 
     .header {
         background-color: $roman_coffee;
+        display: block;
         padding: 15px 20px;
-        width: 100;
+        width: 100%;
         box-sizing: border-box;
 
         border-bottom-left-radius: 12px;
