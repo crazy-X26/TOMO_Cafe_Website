@@ -1,0 +1,7 @@
+services:
+  tomo-cafe:
+    build: .
+    container_name: tomo-cafe
+    ports:
+      - "8080:80"
+    restart: unless-stopped
