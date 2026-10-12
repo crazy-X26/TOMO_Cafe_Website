@@ -1,3 +1,4 @@
+import '../scss/styles.scss'
 import './gallery.js';
 import menuPdfUrl from '../assets/menue.pdf';
 
