@@ -6,7 +6,7 @@ let startX = 0;
 let startScroll = 0;
 let lastTime = 0;
 
-const speed = 35; // px per second
+const speed = 45; // px per second
 
 function getLoopWidth() {
     const firstImage = images.children[0];
